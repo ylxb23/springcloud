@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zero.spring.cloud.ribbon.domain.service.HelloService;
 
 /**
@@ -27,17 +28,22 @@ public class HelloServiceImpl implements HelloService {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	
 	@Override
+	@HystrixCommand(fallbackMethod = "hiError")
 	public String hiService(String name) {
 		try {
 			URI uri = new URIBuilder()
-					.setScheme("http").setHost("EUREKA-CLIENT").setPort(3000)
+					.setScheme("http").setHost("EUREKA-CLIENT")
 					.setPath("/dc").addParameter("name", name).build();
 			return restTemplate.getForObject(uri.toString(), String.class);
 		} catch(URISyntaxException e) {
 			logger.error("invoke hiService with name[{}] occurred URISyntaxException: ", name, e);
 			return "ERROR";
 		}
+	}
+	
+	@Override
+	public String hiError(String name) {
+		return "Hi, " + name + ", sorry, service error!";
 	}
 }

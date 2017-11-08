@@ -108,9 +108,7 @@ project(":eurekaserver") {
 		// This dependency is used internally, and not exposed to consumers on their own compile classpath.
 		//implementation 'com.google.guava:guava:21.0'
 	
-        compile(libraries.springBoot)
         compile(libraries.springBootWeb)
-        
         compile(libraries.springCloudEurekaServer)
         
         testCompile(libraries.springBootTest)
@@ -121,10 +119,8 @@ project(":eurekaclient01") {
 	
     dependencies {
         compile(libraries.springBootWeb)
-        
         compile(libraries.springCloudEureka)
 //      compile(libraries.springCloudConsulDiscovery)
-        compile(libraries.springCloudEurekaServer)
         
         testCompile(libraries.springBootTest)
     }
@@ -135,10 +131,7 @@ project(":eurekaclient02") {
     dependencies {
         compile(libraries.httpClient)
         compile(libraries.springBootWeb)
-        
         compile(libraries.springCloudEureka)
-        compile(libraries.springCloudRibbon)
-        compile(libraries.springCloudEurekaServer)
         
         testCompile(libraries.springBootTest)
     }
@@ -146,15 +139,30 @@ project(":eurekaclient02") {
 
 
 project(":serviceribbon") {
-    description = "spring ribbon(负载均衡客户端,可以很好的控制http和tcp的一些行为,Feign默认集成了ribbon.)"
+    description = "rest+ribbon 实现负载均衡客户端,可以很好的控制http和tcp的一些行为,Feign默认集成了ribbon."
 
     dependencies {
         compile(libraries.springBootWeb)
-        
+        compile(libraries.springActuator)
         compile(libraries.springCloudEureka)
         compile(libraries.springCloudRibbon)
-        compile(libraries.springCloudEurekaServer)
+        compile(libraries.springCloudHystrix)
+        compile(libraries.springCloudHystrixDashboard)
         
         testCompile(libraries.springBootTest)
     }    
+}
+
+project(":servicefeign") {
+    description = "Feign是一个声明式的伪Http客户端，它使得写Http客户端变得更简单。使用Feign，只需要创建一个接口并注解。它具有可插拔的注解特性，可使用Feign 注解和JAX-RS注解。Feign支持可插拔的编码器和解码器。Feign默认集成了Ribbon，并和Eureka结合，默认实现了负载均衡的效果。"
+    
+    dependencies {
+        compile(libraries.springBootWeb)
+        compile(libraries.springActuator)
+        compile(libraries.springCloudEureka)
+        compile(libraries.springCloudFeign)
+        compile(libraries.springCloudHystrixDashboard)
+        
+        testCompile(libraries.springBootTest)
+    }
 }

@@ -13,6 +13,9 @@ ext {
         
         springCloudEureka:                "org.springframework.cloud:spring-cloud-starter-eureka",
         springCloudRibbon:                "org.springframework.cloud:spring-cloud-starter-ribbon",
+        springCloudFeign:                 "org.springframework.cloud:spring-cloud-starter-feign",
+        springCloudHystrix:               "org.springframework.cloud:spring-cloud-starter-hystrix",
+        springCloudHystrixDashboard:      "org.springframework.cloud:spring-cloud-starter-hystrix-dashboard",
         springCloudConsulDiscovery:       "org.springframework.cloud:spring-cloud-starter-consul-discovery",
         springCloudEurekaServer:          "org.springframework.cloud:spring-cloud-starter-eureka-server",
         

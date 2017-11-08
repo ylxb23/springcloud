@@ -22,6 +22,11 @@ public class HelloController {
 	@Autowired
 	private HelloService helloService;
 	
+	/**
+	 * 客户端通过调用该请求获取服务提供者(EurekaClient)提供的'/dc'接口服务，并实现负载均衡
+	 * @param name
+	 * @return
+	 */
 	@RequestMapping(value="/hi", method= {RequestMethod.GET})
 	public String hi(@RequestParam String name) {
 		logger.info("Request from {}, call /hi.", name);

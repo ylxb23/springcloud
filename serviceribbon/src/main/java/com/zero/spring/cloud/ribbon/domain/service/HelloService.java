@@ -13,6 +13,13 @@ public interface HelloService {
 	 * @return
 	 */
 	String hiService(String name);
+
+	/**
+	 * hiService 熔断之后的 fallbackMethod
+	 * @param name
+	 * @return
+	 */
+	String hiError(String name);
 	
 	
 }
