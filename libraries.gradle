@@ -1,0 +1,23 @@
+
+ext {
+    springbootVersion               = '1.5.3.RELEASE'
+    httpClientVersion               = '4.5.3'
+    
+    libraries = [
+        httpClient:                       "org.apache.httpcomponents:httpclient:${httpClientVersion}",
+        springBoot:                       "org.springframework.boot:spring-boot-starter",
+        springBootWeb:                    "org.springframework.boot:spring-boot-starter-web",
+        springThymeleaf:                  "org.springframework.boot:spring-boot-starter-thymeleaf",
+        springSecurity:                   "org.springframework.boot:spring-boot-starter-security",
+        springActuator:                   "org.springframework.boot:spring-boot-starter-actuator",
+        
+        springCloudEureka:                "org.springframework.cloud:spring-cloud-starter-eureka",
+        springCloudRibbon:                "org.springframework.cloud:spring-cloud-starter-ribbon",
+        springCloudConsulDiscovery:       "org.springframework.cloud:spring-cloud-starter-consul-discovery",
+        springCloudEurekaServer:          "org.springframework.cloud:spring-cloud-starter-eureka-server",
+        
+        springBootTest:                   "org.springframework.boot:spring-boot-starter-test",
+        springSecurityTest:               "org.springframework.security:spring-security-test",
+        junit:                            "junit:junit"
+    ]
+}
