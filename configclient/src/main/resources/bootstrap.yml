@@ -1,0 +1,12 @@
+server:
+    port: 3051
+
+spring:
+    application:
+        name: configclient
+    cloud:
+        config:
+            label: master
+            profile: dev
+            uri: http://localhost:3050/
+            

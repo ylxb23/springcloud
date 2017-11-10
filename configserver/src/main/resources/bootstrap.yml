@@ -1,6 +1,6 @@
 spring:
     application:
-        name: configclient
+        name: configserver
     cloud:
         config:
             label: master
@@ -10,6 +10,5 @@ spring:
                     searchPaths: configclient
                     username: 
                     password: 
-                    label: master
 server:
     port: 3050
