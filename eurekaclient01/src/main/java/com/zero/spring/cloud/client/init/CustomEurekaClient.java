@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * spring-cloud eureka application
@@ -14,8 +14,8 @@ import org.springframework.context.annotation.ComponentScan;
  * @author zero
  */
 @EnableDiscoveryClient
-@SpringBootApplication
-@ComponentScan(value= {"com.zero.spring.cloud.client"})
+@SpringBootApplication(scanBasePackages= {"com.zero.spring.cloud.client"})
+@PropertySource(value= {"application.properties"})
 public class CustomEurekaClient {
 	private static final Logger logger = LoggerFactory.getLogger(CustomEurekaClient.class);
 	

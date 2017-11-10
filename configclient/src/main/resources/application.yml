@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: configclient
+    cloud:
+        config:
+            server:
+                git:
+                    uri: git@github.com:ylxb23/scc.git
+                    username: 
+                    password: 
+server:
+    port: 3050

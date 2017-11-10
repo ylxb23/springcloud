@@ -5,3 +5,6 @@
 - eurekaclient01    服务提供者(EurekaClient)
 - eurekaclient02    服务提供者(EurekaClient)，项目内容与eurekaclient01一致，唯一不同是配置文件中的 `server.port`，主要是为了方便启动模拟服务提供者多实例的情况。
 - serviceribbon 服务消费者(rest+ribbon)
+- servicefeign  使用feign(基于ribbon, eureka)的服务消费者
+- servicezuul   路由服务
+- configclient  spring-cloud配置服务

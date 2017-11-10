@@ -166,3 +166,29 @@ project(":servicefeign") {
         testCompile(libraries.springBootTest)
     }
 }
+
+project(":servicezuul") {
+    description = "路由器"
+    
+    dependencies {
+        compile(libraries.springBootWeb)
+        compile(libraries.springActuator)
+        compile(libraries.springCloudEureka)
+        compile(libraries.springCloudZuul)
+        
+        testCompile(libraries.springBootTest)
+    }
+}
+
+project(":configclient") {
+    description = "spring-cloud config project."
+
+    dependencies {
+        compile(libraries.springBootWeb)
+        compile(libraries.springActuator)
+        compile(libraries.springCloudEureka)
+        compile(libraries.springCloudConfig)
+
+        testCompile(libraries.springBootTest)
+    }
+}

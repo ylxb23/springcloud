@@ -11,11 +11,13 @@ ext {
         springSecurity:                   "org.springframework.boot:spring-boot-starter-security",
         springActuator:                   "org.springframework.boot:spring-boot-starter-actuator",
         
+        springCloudConfig:                "org.springframework.cloud:spring-cloud-config-server",
         springCloudEureka:                "org.springframework.cloud:spring-cloud-starter-eureka",
         springCloudRibbon:                "org.springframework.cloud:spring-cloud-starter-ribbon",
         springCloudFeign:                 "org.springframework.cloud:spring-cloud-starter-feign",
         springCloudHystrix:               "org.springframework.cloud:spring-cloud-starter-hystrix",
         springCloudHystrixDashboard:      "org.springframework.cloud:spring-cloud-starter-hystrix-dashboard",
+        springCloudZuul:                  "org.springframework.cloud:spring-cloud-starter-zuul",    // 路由、过滤器
         springCloudConsulDiscovery:       "org.springframework.cloud:spring-cloud-starter-consul-discovery",
         springCloudEurekaServer:          "org.springframework.cloud:spring-cloud-starter-eureka-server",
         
