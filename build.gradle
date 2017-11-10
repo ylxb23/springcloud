@@ -110,6 +110,7 @@ project(":eurekaserver") {
 	
         compile(libraries.springBootWeb)
         compile(libraries.springCloudEurekaServer)
+        compile(libraries.springCloudConfigServer)  // 集成配置中心
         
         testCompile(libraries.springBootTest)
     }

@@ -13,6 +13,7 @@ import org.springframework.context.annotation.PropertySource;
  * @date 2017年11月2日 下午3:51:55
  * @author zero
  */
+//@EnableConfigServer	// 集成配置中心
 @EnableEurekaServer
 @SpringBootApplication
 @PropertySource(value= {"application.properties"})

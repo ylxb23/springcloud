@@ -3,6 +3,7 @@ package com.zero.spring.cloud.config.init;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * spring-config server application entrance(配置中心).
@@ -17,6 +18,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @date 2017年11月9日 下午11:47:22
  * @author zero
  */
+@EnableEurekaClient
 @EnableConfigServer
 @SpringBootApplication
 public class ConfigServerApp {
