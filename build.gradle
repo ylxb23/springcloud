@@ -180,8 +180,21 @@ project(":servicezuul") {
     }
 }
 
+project(":configserver") {
+    description = "spring-cloud config server project."
+
+    dependencies {
+        compile(libraries.springBootWeb)
+        compile(libraries.springActuator)
+        compile(libraries.springCloudEureka)
+        compile(libraries.springCloudConfigServer)
+
+        testCompile(libraries.springBootTest)
+    }
+}
+
 project(":configclient") {
-    description = "spring-cloud config project."
+    description = "spring-cloud config client project."
 
     dependencies {
         compile(libraries.springBootWeb)

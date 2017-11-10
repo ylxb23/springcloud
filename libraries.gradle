@@ -11,7 +11,8 @@ ext {
         springSecurity:                   "org.springframework.boot:spring-boot-starter-security",
         springActuator:                   "org.springframework.boot:spring-boot-starter-actuator",
         
-        springCloudConfig:                "org.springframework.cloud:spring-cloud-config-server",
+        springCloudConfig:                "org.springframework.cloud:spring-cloud-starter-config",
+        springCloudConfigServer:          "org.springframework.cloud:spring-cloud-config-server",
         springCloudEureka:                "org.springframework.cloud:spring-cloud-starter-eureka",
         springCloudRibbon:                "org.springframework.cloud:spring-cloud-starter-ribbon",
         springCloudFeign:                 "org.springframework.cloud:spring-cloud-starter-feign",
