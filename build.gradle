@@ -121,6 +121,7 @@ project(":eurekaclient01") {
     dependencies {
         compile(libraries.springBootWeb)
         compile(libraries.springCloudEureka)
+        compile(libraries.springCloudZipkin)
 //      compile(libraries.springCloudConsulDiscovery)
         
         testCompile(libraries.springBootTest)
@@ -132,6 +133,7 @@ project(":eurekaclient02") {
     dependencies {
         compile(libraries.httpClient)
         compile(libraries.springBootWeb)
+        compile(libraries.springCloudZipkin)
         compile(libraries.springCloudEureka)
         
         testCompile(libraries.springBootTest)
@@ -144,6 +146,7 @@ project(":serviceribbon") {
 
     dependencies {
         compile(libraries.springBootWeb)
+        compile(libraries.springCloudZipkin)
         compile(libraries.springActuator)
         compile(libraries.springCloudEureka)
         compile(libraries.springCloudRibbon)
@@ -160,6 +163,7 @@ project(":servicefeign") {
     dependencies {
         compile(libraries.springBootWeb)
         compile(libraries.springActuator)
+        compile(libraries.springCloudZipkin)
         compile(libraries.springCloudEureka)
         compile(libraries.springCloudFeign)
         compile(libraries.springCloudHystrixDashboard)
@@ -173,6 +177,7 @@ project(":servicezuul") {
     
     dependencies {
         compile(libraries.springBootWeb)
+        compile(libraries.springCloudZipkin)
         compile(libraries.springActuator)
         compile(libraries.springCloudEureka)
         compile(libraries.springCloudZuul)
@@ -186,6 +191,7 @@ project(":configserver") {
 
     dependencies {
         compile(libraries.springBootWeb)
+        compile(libraries.springCloudZipkin)
         compile(libraries.springActuator)
         compile(libraries.springCloudEureka)
         compile(libraries.springCloudConfigServer)
@@ -205,6 +211,22 @@ project(":configclient") {
         compile(libraries.springCloudEureka)
         compile(libraries.springCloudConfig)
         compile(libraries.springCloudBusAmqp)
+
+        testCompile(libraries.springBootTest)
+    }
+}
+
+project(":servicezipkin") {
+    description = "Spring Cloud Sleuth 主要功能就是在分布式系统中提供服务追踪解决方案，并且兼容支持了 zipkin"
+    
+    dependencies {
+        compile(libraries.zipkinServer)
+        compile(libraries.springCloudZipkin)
+//        compile(libraries.springCloudSleuthZipkin)
+        compile(libraries.zipkinConfigUI)
+        compile(libraries.springBootWeb)
+        compile(libraries.springActuator)
+        compile(libraries.springCloudEureka)
 
         testCompile(libraries.springBootTest)
     }

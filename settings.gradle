@@ -25,3 +25,5 @@ include ":servicefeign"
 include ":servicezuul"
 include ":configserver"
 include ":configclient"
+
+include ":servicezipkin"

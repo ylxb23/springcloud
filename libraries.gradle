@@ -5,6 +5,10 @@ ext {
     
     libraries = [
         httpClient:                       "org.apache.httpcomponents:httpclient:${httpClientVersion}",
+        
+        zipkinServer:                     "io.zipkin.java:zipkin-server",
+        zipkinConfigUI:                   "io.zipkin.java:zipkin-autoconfigure-ui",
+        
         springRetry:                      "org.springframework.retry:spring-retry",
         springBoot:                       "org.springframework.boot:spring-boot-starter",
         springBootAop:                    "org.springframework.boot:spring-boot-starter-aop",
@@ -24,6 +28,8 @@ ext {
         springCloudConsulDiscovery:       "org.springframework.cloud:spring-cloud-starter-consul-discovery",
         springCloudEurekaServer:          "org.springframework.cloud:spring-cloud-starter-eureka-server",
         springCloudBusAmqp:               "org.springframework.cloud:spring-cloud-starter-bus-amqp",
+        springCloudZipkin:                "org.springframework.cloud:spring-cloud-starter-zipkin",
+        springCloudSleuthZipkin:          "org.springframework.cloud:spring-cloud-sleuth-zipkin",
         
         springBootTest:                   "org.springframework.boot:spring-boot-starter-test",
         springSecurityTest:               "org.springframework.security:spring-security-test",
