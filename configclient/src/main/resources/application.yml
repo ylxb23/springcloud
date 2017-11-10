@@ -3,10 +3,13 @@ spring:
         name: configclient
     cloud:
         config:
+            label: master
             server:
                 git:
                     uri: git@github.com:ylxb23/scc.git
+                    searchPaths: configclient
                     username: 
                     password: 
+                    label: master
 server:
     port: 3050
