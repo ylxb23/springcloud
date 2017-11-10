@@ -7,4 +7,5 @@
 - serviceribbon 服务消费者(rest+ribbon)
 - servicefeign  使用feign(基于ribbon, eureka)的服务消费者
 - servicezuul   路由服务
-- configclient  spring-cloud配置服务
+- configserver  spring-cloud配置中心(使用git仓库存储配置信息-自带版本控制能力，.yml配置文件不允许使用`\t`)
+- configclient  spring-cloud读取配置中心DEMO(可集成到其他spring-cloud服务)
