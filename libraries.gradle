@@ -5,7 +5,9 @@ ext {
     
     libraries = [
         httpClient:                       "org.apache.httpcomponents:httpclient:${httpClientVersion}",
+        springRetry:                      "org.springframework.retry:spring-retry",
         springBoot:                       "org.springframework.boot:spring-boot-starter",
+        springBootAop:                    "org.springframework.boot:spring-boot-starter-aop",
         springBootWeb:                    "org.springframework.boot:spring-boot-starter-web",
         springThymeleaf:                  "org.springframework.boot:spring-boot-starter-thymeleaf",
         springSecurity:                   "org.springframework.boot:spring-boot-starter-security",
@@ -21,6 +23,7 @@ ext {
         springCloudZuul:                  "org.springframework.cloud:spring-cloud-starter-zuul",    // 路由、过滤器
         springCloudConsulDiscovery:       "org.springframework.cloud:spring-cloud-starter-consul-discovery",
         springCloudEurekaServer:          "org.springframework.cloud:spring-cloud-starter-eureka-server",
+        springCloudBusAmqp:               "org.springframework.cloud:spring-cloud-starter-bus-amqp",
         
         springBootTest:                   "org.springframework.boot:spring-boot-starter-test",
         springSecurityTest:               "org.springframework.security:spring-security-test",

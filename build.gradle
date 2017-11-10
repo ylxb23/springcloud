@@ -198,10 +198,13 @@ project(":configclient") {
     description = "spring-cloud config client project."
 
     dependencies {
+        compile(libraries.springRetry)
+        compile(libraries.springBootAop)
         compile(libraries.springBootWeb)
         compile(libraries.springActuator)
         compile(libraries.springCloudEureka)
         compile(libraries.springCloudConfig)
+        compile(libraries.springCloudBusAmqp)
 
         testCompile(libraries.springBootTest)
     }
