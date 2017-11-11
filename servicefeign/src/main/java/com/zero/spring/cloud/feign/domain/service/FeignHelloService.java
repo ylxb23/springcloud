@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @date 2017年11月8日 上午11:24:18
  * @author zero
  */
-@FeignClient(value="eureka-client", fallback= FeignHelloServiceHystric.class)
+@FeignClient(value="eureka-client", fallback= FeignHelloServiceImpl.class)
 public interface FeignHelloService {
 	
 	/**
