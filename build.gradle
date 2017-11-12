@@ -231,3 +231,17 @@ project(":servicezipkin") {
         testCompile(libraries.springBootTest)
     }
 }
+
+project(":serviceturbine") {
+    description = "Hystrix Turbine将每个服务Hystrix Dashboard数据进行了整合"
+    
+    dependencies {
+        compile(libraries.springBootWeb)
+        compile(libraries.springActuator)
+        compile(libraries.springCloudTurbine)
+        compile(libraries.springCloudNetflixTurbine)
+
+        testCompile(libraries.springBootTest)
+    }
+
+}

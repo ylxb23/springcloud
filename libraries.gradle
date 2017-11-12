@@ -30,6 +30,8 @@ ext {
         springCloudBusAmqp:               "org.springframework.cloud:spring-cloud-starter-bus-amqp",
         springCloudZipkin:                "org.springframework.cloud:spring-cloud-starter-zipkin",
         springCloudSleuthZipkin:          "org.springframework.cloud:spring-cloud-sleuth-zipkin",
+        springCloudTurbine:               "org.springframework.cloud:spring-cloud-starter-turbine",
+        springCloudNetflixTurbine:        "org.springframework.cloud:spring-cloud-netflix-turbine",
         
         springBootTest:                   "org.springframework.boot:spring-boot-starter-test",
         springSecurityTest:               "org.springframework.security:spring-security-test",

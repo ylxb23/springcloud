@@ -8,7 +8,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * spring-cloud eureka application
@@ -18,8 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableHystrix	// 可使用断路器
 @EnableHystrixDashboard	// 断路器仪表盘,通过 /hystrix 访问
 @EnableDiscoveryClient
-@SpringBootApplication
-@ComponentScan(value= {"com.zero.spring.cloud.ribbon"})
+@SpringBootApplication(scanBasePackages= {"com.zero.spring.cloud.ribbon"})
 public class EurekaRibbonApp {
 	private static final Logger logger = LoggerFactory.getLogger(EurekaRibbonApp.class);
 	
