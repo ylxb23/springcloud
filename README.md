@@ -11,3 +11,4 @@
 - configserver  spring-cloud配置中心(使用git仓库存储配置信息-自带版本控制能力，.yml配置文件不允许使用`\t`)
 - configclient  spring-cloud读取配置中心DEMO(可集成到其他spring-cloud服务)
 - servicezipkin 收集分布式系统之间的调用关系，实现服务依赖链路追踪
+- serviceturbine    Hystrix Turbine将每个服务Hystrix Dashboard数据进行了整合

@@ -27,3 +27,4 @@ include ":configserver"
 include ":configclient"
 
 include ":servicezipkin"
+include ":serviceturbine"
