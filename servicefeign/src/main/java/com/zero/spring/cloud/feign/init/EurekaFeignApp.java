@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -18,10 +19,10 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @date 2017年11月8日 上午11:17:48
  * @author zero
  */
-@SpringBootApplication
-@EnableDiscoveryClient
+@EnableEurekaClient
 @EnableFeignClients
-//@PropertySource(value= {"application.properties"})
+@EnableDiscoveryClient
+@SpringBootApplication()
 public class EurekaFeignApp {
 	private static final Logger logger = LoggerFactory.getLogger(EurekaFeignApp.class);
 	
